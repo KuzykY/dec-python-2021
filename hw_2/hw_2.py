@@ -20,17 +20,14 @@ def notebook():
 # expanded_form(12) # return '10 + 2'
 # expanded_form(42) # return '40 + 2'
 # expanded_form(70304) # return '70000 + 300 + 4'
-def expanded_form(a):
-    a = str(a)
-    a = list(a)
-    b = []
-    for i in a:
-        b.append(int(i))
-    return expanded_form()
+def expanded_form(n):
+    result = []
+    for index, digit in enumerate(str(n)[::-1]):
+        if int(digit) != 0:
+            result.append(digit + ('0' * index))
+    return ' + '.join(result[::-1])
 
-print(expanded_form(133))
-
-
+print(expanded_form(132))
 
 # 4)создать декоратор который будет считать сколько раз была запущена функция
 # и будет выводит это значение после каждого запуска функции
