@@ -22,9 +22,9 @@ def notebook():
 # expanded_form(70304) # return '70000 + 300 + 4'
 def expanded_form(n):
     result = []
-    for index, digit in enumerate(str(n)[::-1]):
-        if int(digit) != 0:
-            result.append(digit + ('0' * index))
+    for i, d in enumerate(str(n)[::-1]):
+        if int(d) != 0:
+            result.append(d + ('0' * i))
     return ' + '.join(result[::-1])
 
 print(expanded_form(132))
