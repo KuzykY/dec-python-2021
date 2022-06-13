@@ -172,13 +172,25 @@
 #   наприклад:
 #   st = 'as 23 fdfdg544' #введена строка
 
-def symbol_counter(string: str) -> None:
-    total = {}
-    for i in range(len(string)):
-        counter = total.get(string[i], 0) + 1
-        total.update({string[i]: counter})
-    for key, item in total.items():
-        print(f'\'{key}\' -> {item}')
+# def symbol_counter(string: str) -> None:
+#     total = {}
+#     for i in range(len(string)):
+#         counter = total.get(string[i], 0) + 1
+#         total.update({string[i]: counter})
+#     for k, v in total.items():
+#         print(f'\'{k}\' -> {v}')
+#
+#
+# symbol_counter('as 23 fdfdg544')
 
 
-symbol_counter('as 23 fdfdg544')
+# генерируем лист с непарных чисел в порядке возрастания [1,3,5,7,9.....n]
+# задача сделать c него лист листов такого плана:
+#
+# [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]  => [ [1], [3,5], [7,9,11], [13,15,17,19] ]
+# [1, 3, 5, 7, 9, 11] => [[1], [3, 5], [7, 9, 11]]
+# [1, 3, 5, 7, 9]  => [ [1], [3,5], [7,9]]
+# [1, 3, 5, 7, 9, 11, 13]  => [[1], [3, 5], [7, 9, 11], [13]]
+
+def list_ne(size: int = 0):
+    return [i for i in range(size * 2) if i % 2]
