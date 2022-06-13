@@ -138,31 +138,47 @@
 #   наприклад: x = 10 -> 1 1 2 3 5 8 13 21 34 55
 #   (число з послідовності - це сума попередніх двох чисел)
 #
-def fibonacci(n: int) -> str:
-    num1 = num2 = 1
-    list_num = [str(num1), str(num2)]
-    for i in range(2, n):
-        num1, num2 = num2, num1 + num2
-        list_num.append(str(num2))
-    return ' '.join(list_num)
-
-
-print(fibonacci(30))
+# def fibonacci(n: int) -> str:
+#     num1 = num2 = 1
+#     list_num = [str(num1), str(num2)]
+#     for i in range(2, n):
+#         num1, num2 = num2, num1 + num2
+#         list_num.append(str(num2))
+#     return ' '.join(list_num)
+#
+#
+# print(fibonacci(30))
 
 
 # порахувати кількість парних і непарних цифр числа,
 #   наприклад: х = 225688 -> п = 5, н = 1;
 #          х = 33294 -> п = 2, н = 3
 
-def ene(n: int) -> str:
-    e = ne = 0
-    for i in str(n):
-        if int(i) % 2:
-            ne += 1
-        else:
-            e += 1
-    return f'even numbers={e},non-even numbers={ne}'
+# def ene(n: int) -> str:
+#     e = ne = 0
+#     for i in str(n):
+#         if int(i) % 2:
+#             ne += 1
+#         else:
+#             e += 1
+#     return f'even numbers={e},non-even numbers={ne}'
+#
+#
+# print('********************************************')
+# print(ene(46368))
 
 
-print('********************************************')
-print(ene(46368))
+# прога, що виводить кількість кожного символа з введеної строки,
+#   наприклад:
+#   st = 'as 23 fdfdg544' #введена строка
+
+def symbol_counter(string: str)->None:
+    total = {}
+    for i in range(len(string)):
+        counter = total.get(string[i], 0) + 1
+        total.update({string[i]: counter})
+    for key, item in total.items():
+         print(f'\'{key}\' -> {item}')
+
+
+symbol_counter('as 23 fdfdg544')
