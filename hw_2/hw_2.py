@@ -172,13 +172,13 @@
 #   наприклад:
 #   st = 'as 23 fdfdg544' #введена строка
 
-def symbol_counter(string: str)->None:
+def symbol_counter(string: str) -> None:
     total = {}
     for i in range(len(string)):
         counter = total.get(string[i], 0) + 1
         total.update({string[i]: counter})
     for key, item in total.items():
-         print(f'\'{key}\' -> {item}')
+        print(f'\'{key}\' -> {item}')
 
 
 symbol_counter('as 23 fdfdg544')
