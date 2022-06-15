@@ -102,6 +102,7 @@ class Prince(Human):
                 return cinderella
         return None
 
+
 prince = Prince('Max', 25, 35)
 cinderellas_list = [Cinderella('Kira', 22, 34), Cinderella('Anna', 25, 35), Cinderella('Olya', 26, 36)]
 
