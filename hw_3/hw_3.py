@@ -104,10 +104,10 @@ class Prince(Human):
 
 prince = Prince('Max', 25, 35)
 cinderellas_list = [Cinderella('Kira', 22, 34), Cinderella('Anna', 25, 35), Cinderella('Olya', 26, 36)]
-cinderella_find = prince.find(cinderellas_list)
+
 
 
 print(prince)
 print(cinderellas_list)
-print(cinderella_find)
+print(prince.find(cinderellas_list))
 print(Cinderella.get_count())
