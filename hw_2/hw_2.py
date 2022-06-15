@@ -4,12 +4,14 @@
 # запишите 5 тудушек и выведете все
 #
 # - первый записывает в эту переменную запись
-#
+# #
 # def notebook():
 #     todo_list=[]
 #     def add_todo(todo):
+#         nonlocal todo_list
 #         todo_list.append(todo)
 #     def get_all():
+#         nonlocal todo_list
 #         return todo_list
 #     return add_todo,get_all
 #
@@ -26,27 +28,29 @@
 # 2) протипизировать первое задание
 #
 #
-def notebook() -> [str]:
-    todo_list = []
-
-    def add_todo(todo: str) -> None:
-        todo_list.append(todo)
-
-    def get_all() -> list[str]:
-        return todo_list
-
-    return add_todo, get_all
-
-
-add_todo, get_all = notebook()
-
-add_todo("wake up")
-add_todo('brush your teeth')
-add_todo('listen to a lecture')
-add_todo('do homework')
-add_todo('go sleep')
-
-print(get_all())
+# def notebook() -> [str]:
+#     todo_list = []
+#
+#     def add_todo(todo: str) -> None:
+#         nonlocal todo_list
+#         todo_list.append(todo)
+#
+#     def get_all() -> list[str]:
+#         nonlocal todo_list
+#         return todo_list
+#
+#     return add_todo, get_all
+#
+#
+# add_todo, get_all = notebook()
+#
+# add_todo("wake up")
+# add_todo('brush your teeth')
+# add_todo('listen to a lecture')
+# add_todo('do homework')
+# add_todo('go sleep')
+#
+# print(get_all())
 
 
 # 3) создать функцию которая будет возвращать сумму разрядов числа в виде строки (тоже с типизацией)
